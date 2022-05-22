@@ -17,7 +17,7 @@ void upLoad(map<int,Student>&, map<int,Course>&);
 const Admin mina("MinaNabil", "12345678");
 const Admin michel("MichelMagdy", "12345678");
 const Admin samy("SamySamer","12345678");
-const Admin sandra("SandraAlfy", "12345678");
+const Admin sandra("SandraAlfy", "22345678");
 const Admin maria("MariaMedhat", "12345678");
 const Admin marina("MarinaAtef", "12345678");
 
