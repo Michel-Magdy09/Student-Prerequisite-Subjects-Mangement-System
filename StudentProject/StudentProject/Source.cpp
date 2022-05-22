@@ -52,7 +52,7 @@ int main() {
 				for (int i = 0; i < admins.size(); i++)
 				{
 					if (userName == admins[i].getName()) {
-						foundUser = true;
+					
 						foundUser = i;
 						break;
 					}
