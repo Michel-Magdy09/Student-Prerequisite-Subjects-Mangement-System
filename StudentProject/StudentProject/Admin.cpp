@@ -144,15 +144,14 @@ void Admin::editCourseData(map<int, Course>& courses) {
 		cout << "No course here with this code \n"; return;
 	}
 
-	string name; int courseCode; int maxStud; int hours; list<Course> requiredCourses;
+	string name; int maxStud; int hours; list<Course> requiredCourses;
 	cout << "Enter Course Name : "; cin >> name;
-	cout << "Enter Course Code : "; cin >> courseCode;
 
 	for (map<int, Course>::iterator i = courses.begin(); i != courses.end(); i++)
 	{
-		if ((name == i->second.getCourseName() && name != courses[code].getCourseName())|| (courseCode == i->second.getCourseCode() && courseCode != courses[code].getCourseCode()))
+		if (name == i->second.getCourseName() && i->second.getCourseCode() != code)
 		{
-			cout << "this course is already exists.\n";
+			cout << "There's a course with this name already\n";
 			return;
 		}
 	}
@@ -171,7 +170,6 @@ void Admin::editCourseData(map<int, Course>& courses) {
 		}
 	}
 	courses[code].setName(name);
-	courses[code].setCourseCode(code);
 	courses[code].setHours(hours);
 	courses[code].setMaxStudents(maxStud);
 	courses[code].setRequiredCourses(requiredCourses);
